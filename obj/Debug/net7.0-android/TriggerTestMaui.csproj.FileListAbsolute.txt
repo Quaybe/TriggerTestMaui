@@ -470,6 +470,7 @@ C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\assets\Xamar
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\assets\Xamarin.Kotlin.StdLib.Jdk8.dll
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\assets\Xamarin.KotlinX.Coroutines.Android.dll
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\assets\Xamarin.KotlinX.Coroutines.Core.Jvm.dll
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\typemaps.x86.ll
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\AndroidManifest.xml
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\AndroidManifest.xml
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\__environment__.txt
@@ -478,6 +479,7 @@ C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\assets\machi
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\bin\mono.android.jar
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\static.flag
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\buildid.txt
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\environment.x86.ll
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\androidx\activity\ktx\R.java
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\androidx\activity\R.java
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\androidx\annotation\experimental\R.java
@@ -959,6 +961,12 @@ C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\mono\com
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\mono\MonoPackageManager_Resources.java
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\bin\packaged_resources
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\src\com\companyname\triggertestmaui\R.java
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\compressed_assemblies.x86.ll
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\typemaps.x86.o
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\environment.x86.o
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\compressed_assemblies.x86.o
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\jni_remap.x86.o
+C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\bin\classes.dex
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\bin\classes2.dex
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\stamp\_CleanIntermediateIfNeeded.stamp
@@ -969,11 +977,3 @@ C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\stamp\_ConvertResour
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\stamp\_GenerateJavaStubs.stamp
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\stamp\_GeneratePackageManagerJava.stamp
 C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\stamp\_ResolveLibraryProjectImports.stamp
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\typemaps.x86.ll
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\environment.x86.ll
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\compressed_assemblies.x86.ll
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\typemaps.x86.o
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\environment.x86.o
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\compressed_assemblies.x86.o
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\android\jni_remap.x86.o
-C:\Dev\TriggerTest\TriggerTestMaui\obj\Debug\net7.0-android\app_shared_libraries\x86\libxamarin-app.so

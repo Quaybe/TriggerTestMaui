@@ -7,16 +7,77 @@
              x:Class="TriggerTestMaui.View.MainPage"
              x:DataType="viewmodel:MainPageViewModel">
 
-    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,*,Auto" >
-        <Label Text="Issa Test." Grid.Row="0" Grid.ColumnSpan="2" 
-               FontSize="20"
+    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,*,auto,*,auto" >
+        <Label Text="Binding and Value use Data Binding:" Grid.Row="0" Grid.ColumnSpan="2" 
+               FontSize="16"
                Padding="7" >
         </Label>
-
-        <RefreshView Grid.Row="1"
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+            <Label Text="Int1: " 
+               FontSize="20"
+               Padding="7" >
+            </Label>
+            <Label Text="Int2: "
+               FontSize="20"
+               Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" >
+            <Label Text="{Binding Int1}" 
+               FontSize="20"
+               Padding="7" >
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                             Binding="{Binding Int1}"
+                             Value="{Binding Int2}">
+                        <Setter Property="BackgroundColor"
+                            Value="DarkSeaGreen"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label Text="{Binding Int2}"
+               FontSize="20"
+               Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <Label Text="DataTrigger.Value does not use Binding: " Grid.Row="2" Grid.ColumnSpan="2" 
+               FontSize="16"
+               Padding="7" >
+        </Label>
+        <VerticalStackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Start">
+            <Label Text="Int1: " 
+               FontSize="20"
+               Padding="7" >
+            </Label>
+            <Label Text="Int2: "
+               FontSize="20"
+               Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="3" Grid.Column="1" >
+            <Label Text="{Binding Int1}" 
+               FontSize="20"
+               Padding="7" >
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                             Binding="{Binding Int1}"
+                             Value="2">
+                        <Setter Property="BackgroundColor"
+                            Value="DarkSeaGreen"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label Text="{Binding Int2}"
+               FontSize="20"
+               Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        
+        <!--<RefreshView Grid.Row="1"
                      Grid.ColumnSpan="2"
                      Command="{Binding GetNumbersCommand}"
-                     IsRefreshing="{Binding IsRefreshing}">
+                     IsRefreshing="{Binding IsRefreshing}"
+                     IsVisible="False">
             <CollectionView BackgroundColor="LightGray"
                             ItemsSource="{Binding TestNumbers}">
                 <CollectionView.EmptyView>
@@ -85,15 +146,23 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </RefreshView>
+        </RefreshView>-->
 
-        <Button Text="Refresh/Reset" Grid.Row="2" 
+        <!--<Button Text="Refresh/Reset" Grid.Row="2" 
                 Command="{Binding GetNumbersCommand}"
                 IsEnabled="{Binding IsNotBusy}">
+        </Button>-->
+        <Button Text="Reset" 
+                Grid.Row="4"
+                Grid.Column="0"
+                WidthRequest="150"
+                Command="{Binding ResetCommand}">
+
         </Button>
-        <Button Text="Increment Pulled" 
-                Grid.Row="2"
+            <Button Text="Increment Pulled" 
+                Grid.Row="4"
                 Grid.Column="1"
+                WidthRequest="150"
                 Command="{Binding IncrementPulledCommand}">
         </Button>
     </Grid>
