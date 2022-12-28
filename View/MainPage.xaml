@@ -2,168 +2,96 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel="clr-namespace:TriggerTestMaui.ViewModel"
-             xmlns:model="clr-namespace:TriggerTestMaui.Model"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="TriggerTestMaui.View.MainPage"
-             x:DataType="viewmodel:MainPageViewModel">
+             x:DataType="viewmodel:MainPageViewModel"
+             Title="DataTrigger Test MVVM">
 
     <Grid ColumnDefinitions="*,*" RowDefinitions="auto,*,auto,*,auto" >
-        <Label Text="Binding and Value use Data Binding:" Grid.Row="0" Grid.ColumnSpan="2" 
-               FontSize="16"
-               Padding="7" >
+        <Label Text="DataTrigger.Value set to Value=&quot;{Binding Int2}&quot;: " Grid.Row="0" Grid.ColumnSpan="3" 
+        FontSize="14"
+        Padding="7" >
         </Label>
         <VerticalStackLayout Grid.Row="1" Grid.Column="0">
             <Label Text="Int1: " 
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
             <Label Text="Int2: "
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
         </VerticalStackLayout>
         <VerticalStackLayout Grid.Row="1" Grid.Column="1" >
             <Label Text="{Binding Int1}" 
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
                 <Label.Triggers>
                     <DataTrigger TargetType="Label"
-                             Binding="{Binding Int1}"
-                             Value="{Binding Int2}">
+                        Binding="{Binding Int1}"
+                        Value="{Binding Int2}">
                         <Setter Property="BackgroundColor"
-                            Value="DarkSeaGreen"/>
+                    Value="DarkSeaGreen"/>
                     </DataTrigger>
                 </Label.Triggers>
             </Label>
             <Label Text="{Binding Int2}"
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
         </VerticalStackLayout>
-        <Label Text="DataTrigger.Value does not use Binding: " Grid.Row="2" Grid.ColumnSpan="2" 
-               FontSize="16"
-               Padding="7" >
+        <Label Text="DataTrigger.Value explicitly set to 2: " Grid.Row="2" Grid.ColumnSpan="2" 
+        FontSize="16"
+        Padding="7" >
         </Label>
         <VerticalStackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Start">
             <Label Text="Int1: " 
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
             <Label Text="Int2: "
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
         </VerticalStackLayout>
         <VerticalStackLayout Grid.Row="3" Grid.Column="1" >
             <Label Text="{Binding Int1}" 
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
                 <Label.Triggers>
                     <DataTrigger TargetType="Label"
-                             Binding="{Binding Int1}"
-                             Value="2">
+                        Binding="{Binding Int1}"
+                        Value="2">
                         <Setter Property="BackgroundColor"
-                            Value="DarkSeaGreen"/>
+                    Value="DarkSeaGreen"/>
                     </DataTrigger>
                 </Label.Triggers>
             </Label>
             <Label Text="{Binding Int2}"
-               FontSize="20"
-               Padding="7" >
+        FontSize="20"
+        Padding="7" >
             </Label>
         </VerticalStackLayout>
-        
-        <!--<RefreshView Grid.Row="1"
-                     Grid.ColumnSpan="2"
-                     Command="{Binding GetNumbersCommand}"
-                     IsRefreshing="{Binding IsRefreshing}"
-                     IsVisible="False">
-            <CollectionView BackgroundColor="LightGray"
-                            ItemsSource="{Binding TestNumbers}">
-                <CollectionView.EmptyView>
-                    <StackLayout VerticalOptions="Center"
-                            HorizontalOptions="Center"
-                            WidthRequest="300"
-                            HeightRequest="300">
-                        <Image Source="dotnet_bot.svg"
-                            HorizontalOptions="CenterAndExpand"
-                            VerticalOptions="CenterAndExpand"
-                            Aspect="AspectFill"/>
-                    </StackLayout>
-                </CollectionView.EmptyView>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:TestModel">
-                        <Grid Padding="1">
-                            <Frame HeightRequest="80" Padding="0">
-                                <Grid ColumnDefinitions="auto,*" Padding="0" >
-                                    <Grid.Triggers>
-                                        <DataTrigger TargetType="Grid"
-                                                     Binding="{Binding Pulled}"
-                                                     Value="{Binding Sold}">
-                                            <Setter Property="BackgroundColor"
-                                                    Value="ForestGreen"/>
-                                        </DataTrigger>
-                                    </Grid.Triggers>
-                                    <VerticalStackLayout
-                                        Grid.Column="0"
-                                        Margin="5"
-                                        Padding="5"
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Start">
-                                        <Label Text="Pulled:" 
-                                           VerticalOptions="Center"
-                                           FontSize="20"
-                                           Grid.Column="0">
-                                        </Label>
-                                        <Label Text="Sold:" 
-                                           VerticalOptions="Center"
-                                           FontSize="20"
-                                           Grid.Column="1">
-                                        </Label>
-                                    </VerticalStackLayout>
-                                    <VerticalStackLayout
-                                        Grid.Column="1"
-                                        Margin="5"
-                                        Padding="5"
-                                        VerticalOptions="Center"
-                                        HorizontalOptions="Start">
-                                        <Label x:Name="PulledText"
-                                           Text="{Binding Pulled}" 
-                                           VerticalOptions="Center"
-                                           FontSize="20"
-                                           Grid.Column="0">
-                                        </Label>
-                                        <Label x:Name="SoldText"
-                                           Text="{Binding Sold}" 
-                                           VerticalOptions="Center"
-                                           FontSize="20"
-                                           Grid.Column="1">
-                                        </Label>
-                                    </VerticalStackLayout>
-                                </Grid>
-                            </Frame>
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </RefreshView>-->
 
-        <!--<Button Text="Refresh/Reset" Grid.Row="2" 
-                Command="{Binding GetNumbersCommand}"
-                IsEnabled="{Binding IsNotBusy}">
-        </Button>-->
-        <Button Text="Reset" 
-                Grid.Row="4"
-                Grid.Column="0"
-                WidthRequest="150"
-                Command="{Binding ResetCommand}">
-
-        </Button>
-            <Button Text="Increment Pulled" 
+        <Button Text="Increment Pulled" 
                 Grid.Row="4"
                 Grid.Column="1"
                 WidthRequest="150"
-                Command="{Binding IncrementPulledCommand}">
+                Command="{Binding IncrementIntCommand}">
+        </Button>
+        <Button Text="Decrement Pulled" 
+                Grid.Row="4"
+                Grid.Column="0"
+                WidthRequest="150"
+                Command="{Binding DecrementIntCommand}">
+        </Button>
+        <Button Text="Reset" 
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                WidthRequest="150"
+                VerticalOptions="End"
+                Command="{Binding ResetCommand}">
+
         </Button>
     </Grid>
     

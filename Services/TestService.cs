@@ -2,15 +2,17 @@
 {
     public class TestService
     {
-        List<TestModel> testNumbers = new();
+        // Not needed for this example.
 
-        public async Task<List<TestModel>> GetTestNumbers()
-        {
-            string JSONPickTickets = "[{\"ID\":\"01\",\"Sold\":\"1\",\"Pulled\":\"0\"}," +
-                                     "{\"ID\":\"02\",\"Sold\":\"3\",\"Pulled\":\"0\"}]";
+        //List<TestModel> testNumbers = new();
 
-            testNumbers = JsonConvert.DeserializeObject<List<TestModel>>(JSONPickTickets);
-            return testNumbers;
-        }
+        //public async Task<List<TestModel>> GetTestNumbers()
+        //{
+        //    string JSONPickTickets = "[{\"ID\":\"01\",\"Sold\":\"1\",\"Pulled\":\"0\"}," +
+        //                             "{\"ID\":\"02\",\"Sold\":\"3\",\"Pulled\":\"0\"}]";
+
+        //    testNumbers = JsonConvert.DeserializeObject<List<TestModel>>(JSONPickTickets);
+        //    return testNumbers;
+        //}
     }
 }

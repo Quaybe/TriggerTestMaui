@@ -1,3 +1,4 @@
+C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Microsoft.MacCatalyst.registrar.a
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\TriggerTestMaui.runtimeconfig.json
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\TriggerTestMaui.dll
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\TriggerTestMaui.pdb
@@ -212,7 +213,6 @@ C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libmono-component-hot_reload-stub-static.a
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libmonosgen-2.0.a
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libmonosgen-2.0.dylib
-C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Microsoft.MacCatalyst.registrar.a
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet-debug.a
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet-debug.dylib
 C:\Dev\TriggerTest\TriggerTestMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.a

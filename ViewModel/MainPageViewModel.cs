@@ -6,16 +6,13 @@ namespace TriggerTestMaui.ViewModel
 {
     public partial class MainPageViewModel : BaseViewModel
     {   
-        bool simpleTest = true;
+        //public MainPageViewModel(TestService testService)  // Not needed for this example.
+        //{
+        //    this.testService = testService;
+        //}
+
+        //TestService testService;
         
-        public MainPageViewModel(TestService testService)
-        {
-            this.testService = testService;
-        }
-
-        TestService testService;
-        public ObservableCollection<TestModel> TestNumbers { get; } = new();
-
         [ObservableProperty]
         bool isRefreshing;
         [ObservableProperty]
@@ -54,29 +51,14 @@ namespace TriggerTestMaui.ViewModel
         //    }
         //}
         [RelayCommand]
-        async Task IncrementPulled()
+        async Task IncrementInt()
+        {   
+            Int1++;
+        }
+        [RelayCommand]
+        async Task DecrementInt()
         {
-            if (simpleTest)
-            {
-                Int1++;
-            }
-            else // Not used for test
-            {
-                int localPulled;
-                try
-                {
-                    foreach (var item in TestNumbers)
-                    {
-                        localPulled = Convert.ToInt32(item.Pulled);
-                        localPulled++;
-                        item.Pulled = localPulled.ToString();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    await Shell.Current.DisplayAlert("Error", ex.Message, "OK");
-                }
-            }
+            Int1--;
         }
         [RelayCommand]
         async Task Reset()

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TriggerTestMaui.View.NoMVVMPage"
+             Title="No MVVM Page">
+
+    <Grid ColumnDefinitions="*,*" RowDefinitions="auto,*,auto,*,auto" >
+        <Label Text="DataTrigger.Value set to Value=&quot;{Binding Source={x:Reference int1Label}}&quot;: " Grid.Row="0" Grid.ColumnSpan="3" 
+        FontSize="14"
+        Padding="7" >
+        </Label>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="0">
+            <Label Text="Int1: " 
+        FontSize="20"
+        Padding="7" >
+            </Label>
+            <Label Text="Int2: "
+        FontSize="20"
+        Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" >
+            <Label x:Name="int1Label"
+                   Text=""
+                   FontSize="20"
+                   Padding="7" >   
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                        Binding="{Binding Source={x:Reference int1Label},Path=Text}"
+                        Value="{Binding Source={x:Reference int2Label},Path=Text}">
+                        <Setter Property="BackgroundColor"
+                    Value="DarkSeaGreen"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label x:Name="int2Label"
+                Text=""
+        FontSize="20"
+        Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <Label Text="DataTrigger.Value explicitly set to 2: " Grid.Row="2" Grid.ColumnSpan="2" 
+        FontSize="16"
+        Padding="7" >
+        </Label>
+        <VerticalStackLayout Grid.Row="3" Grid.Column="0" VerticalOptions="Start">
+            <Label Text="Int1: " 
+        FontSize="20"
+        Padding="7" >
+            </Label>
+            <Label Text="Int2: "
+        FontSize="20"
+        Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="3" Grid.Column="1" >
+            <Label x:Name="int1_2Label"
+                Text="" 
+        FontSize="20"
+        Padding="7" >
+                <Label.Triggers>
+                    <DataTrigger TargetType="Label"
+                        Binding="{Binding Source={x:Reference int1Label},Path=Text}"
+                        Value="2">
+                        <Setter Property="BackgroundColor"
+                    Value="DarkSeaGreen"/>
+                    </DataTrigger>
+                </Label.Triggers>
+            </Label>
+            <Label x:Name="int2_2Label"
+                Text=""
+        FontSize="20"
+        Padding="7" >
+            </Label>
+        </VerticalStackLayout>
+
+        <Button Text="Increment Pulled" 
+                Grid.Row="4"
+                Grid.Column="1"
+                WidthRequest="150"
+                Clicked="IncrementInt">
+        </Button>
+        <Button Text="Decrement Pulled" 
+                Grid.Row="4"
+                Grid.Column="0"
+                WidthRequest="150"
+                Clicked="DecrementInt">
+        </Button>
+        <Button Text="Reset" 
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                WidthRequest="150"
+                VerticalOptions="End"
+                Clicked="Reset">
+
+        </Button>
+    </Grid>
+</ContentPage>
